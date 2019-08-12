@@ -5,6 +5,8 @@ ruby '2.5.5'
 
 gem 'rails', '~> 5.2.3'
 
+gem 'devise'
+
 gem "twitter-bootstrap-rails"
 
 gem 'uglifier', '>= 1.3.0'
