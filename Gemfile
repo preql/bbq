@@ -9,8 +9,8 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'rails-i18n'
 
-gem "twitter-bootstrap-rails"
-
+gem 'twitter-bootstrap-rails'
+gem 'font-awesome-rails'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails'
