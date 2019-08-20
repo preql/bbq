@@ -47,8 +47,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
-    bootstrap-datepicker-rails (1.8.0.1)
-      railties (>= 3.0)
     builder (3.2.3)
     byebug (11.0.1)
     commonjs (0.2.7)
@@ -181,7 +179,6 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  bootstrap-datepicker-rails
   byebug
   devise
   devise-i18n
