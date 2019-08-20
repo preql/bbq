@@ -12,7 +12,7 @@ gem 'rails-i18n'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'uglifier', '>= 1.3.0'
-
+gem 'simple_form'
 gem 'jquery-rails'
 
 gem 'bootsnap', '>= 1.1.0', require: false
