@@ -59,3 +59,7 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
+  errors:
+    messages:
+      must_not_be_an_author: 'Вы не можете подписаться на свое событие'
