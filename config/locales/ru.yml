@@ -63,3 +63,4 @@ ru:
   errors:
     messages:
       must_not_be_an_author: 'Вы не можете подписаться на свое событие'
+      email_already_exist: 'Пользователь уже подписан на событие'
