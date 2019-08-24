@@ -1,6 +1,11 @@
-<%= simple_form_for @user do |f| %>
+<%= simple_form_for @user, html: { multipart: true } do |f| %>
   <%= f.input :name %>
   <%= f.input :email %>
+
+    <%= f.label :avatar %>
+    <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
+    <%= f.file_field :avatar %>
+
   <%= f.button :submit, 'Сохранить', class: 'btn btn-primary' %>
   или <%= link_to 'вернуться', :back %>
 <% end %>
