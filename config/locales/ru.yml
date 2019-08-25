@@ -78,3 +78,19 @@ ru:
     messages:
       must_not_be_an_author: 'Вы не можете подписаться на свое событие'
       user_already_exist: 'Вы не можете подписать зарегистрированного пользователя'
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
