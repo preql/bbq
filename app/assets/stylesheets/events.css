@@ -45,7 +45,26 @@
 }
 
 .event-map {
-  margin: 0px 0;
+  margin: 0;
   width: 100%;
-  height: 400px;
+  height: 100%;
+}
+
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  height: 100%;
+}
+
+.event-photos-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.event-photo {
+  padding: 0.4%;
 }

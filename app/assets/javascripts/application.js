@@ -14,5 +14,6 @@
 //= require jquery
 //= require twitter/bootstrap
 //= require map
+//= require ekko-lightbox
 //= require activestorage
 //= require_tree .
