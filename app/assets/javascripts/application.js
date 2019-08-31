@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require map.js
 //= require rails-ujs
 //= require jquery
 //= require twitter/bootstrap
