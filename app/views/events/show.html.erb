@@ -1,11 +1,11 @@
 <div class="event">
   <div class="event-info">
-      <%= content_tag 'div', '', class: 'event-background',
-                      style: "background-image: url(#{event_photo(@event)})" %>
+    <%= content_tag 'div', '', class: 'event-background',
+                    style: "background-image: url(#{event_photo(@event)})" %>
 
-      <div class="event-info-inner row-flex">
-        <div class="col-md-6">
-          <div class="content">
+    <div class="event-info-inner row-flex">
+      <div class="col-md-6">
+        <div class="content">
           <div class="event-description">
             <h1><%= @event.title %></h1>
             <h3><%= l @event.datetime, format: :short %></h3>
@@ -26,11 +26,12 @@
           <% end %>
         </div>
       </div>
-    <div class="col-md-6">
-      <div class="content">
-      <div id="map" class="event-map" data-address="<%= @event.address %>"></div>
-    </div></div></div>
-
+      <div class="col-md-6">
+        <div class="content">
+          <div id="map" class="event-map" data-address="<%= @event.address %>"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="row">
@@ -81,10 +82,4 @@
       <% end %>
     </div>
   </div>
-  <script>
-      $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-          event.preventDefault();
-          $(this).ekkoLightbox();
-      });
-  </script>
 </div>
