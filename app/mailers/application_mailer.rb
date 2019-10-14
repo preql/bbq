@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'bbqforall@evgeha.ru'
+  default from: 'deploy@events-liker.site'
   layout 'mailer'
 end
