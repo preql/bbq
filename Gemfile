@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.3'
 gem 'devise'
 gem 'devise-i18n'
 gem 'rails-i18n'
-
+gem "pundit"
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'uglifier', '>= 1.3.0'
@@ -27,6 +27,9 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
 end
 
 group :development do
