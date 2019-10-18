@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.5'
 
 gem 'rails', '~> 5.2.3'
-
+gem 'resque'
 gem 'devise'
 gem 'devise-i18n'
 gem 'rails-i18n'
@@ -38,7 +38,9 @@ group :development do
   gem 'capistrano-passenger', '~> 0.2'
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-bundler', '~> 1.4.0'
+  gem 'capistrano-resque', '~> 0.2.3', require: false
   gem 'web-console', '>= 3.3.0'
+  gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
 

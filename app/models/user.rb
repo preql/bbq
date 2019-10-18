@@ -20,7 +20,7 @@ class User < ApplicationRecord
       .update_all(user_id: self.id)
   end
 
-  def send_mail
-    UserMailer.send_welcome(self).deliver
+  def send_devise_notification(notification, *args)
+    devise_mailer.send(notification, self, *args).deliver_later
   end
 end
