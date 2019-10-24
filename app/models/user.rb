@@ -9,7 +9,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: {maximum: 35}
 
-  before_validation :set_name, on: :create
   after_commit :link_subscriptions, on: :create
 
   mount_uploader :avatar, AvatarUploader
@@ -26,15 +25,14 @@ class User < ApplicationRecord
 
     provider = access_token.provider
     id = access_token.extra.raw_info.id
+
     url = "https://facebook.com/#{id}"
 
-    where(url: url, provider: provider).first_or_create! do |user|
-      user.email = email
-      user.password = Devise.friendly_token.first(16)
-    end
+    create_user_oauth(access_token, url, provider)
   end
 
   def self.find_for_vkontakte_oauth(access_token)
+
     email = access_token.info.email
     user = where(email: email).first
 
@@ -44,16 +42,17 @@ class User < ApplicationRecord
     id = access_token.extra.raw_info.id
     url = "https://vk.com/#{id}"
 
-    where(url: url, provider: provider).first_or_create! do |user|
-      user.email = email
-      user.password = Devise.friendly_token.first(16)
-    end
+    create_user_oauth(access_token, url, provider)
   end
 
   private
 
-  def set_name
-    self.name = "Товарисч_#{rand(777)}" if self.name.blank?
+  def self.create_user_oauth(access_token, url, provider)
+    where(url: url, provider: provider).first_or_create! do |user|
+      user.email = access_token.info.email
+      user.name = access_token.info.name
+      user.password = Devise.friendly_token.first(16)
+    end
   end
 
   def link_subscriptions
