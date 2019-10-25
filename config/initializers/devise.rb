@@ -266,11 +266,10 @@ Devise.setup do |config|
   config.omniauth :vkontakte, Rails.application.credentials[Rails.env.to_sym][:omniauth_vkontakte_id],
     Rails.application.credentials[Rails.env.to_sym][:omniauth_vkontakte_secret],
                   {
-                    :scope => 'friends,audio,photos,email',
+                    :scope => 'email',
                     :display => 'popup',
-                    :lang => 'en',
-                    :https => 1,
-                    :image_size => 'original'
+                    :lang => 'ru',
+                    :https => 1
                   }
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
