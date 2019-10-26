@@ -8,7 +8,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash[:error] = I18n.t(
         'devise.omniauth_callbacks.failure',
         kind: 'Facebook',
-        reason: 'authentication error'
+        reason: t('pundit.not_authorized')
       )
       redirect_to root_path
     end
@@ -23,7 +23,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash[:error] = I18n.t(
         'devise.omniauth_callbacks.failure',
         kind: 'Vkontakte',
-        reason: 'authentication error'
+        reason: t('pundit.not_authorized')
       )
       redirect_to root_path
     end
