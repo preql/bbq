@@ -18,11 +18,6 @@ class User < ApplicationRecord
   end
 
   def self.find_for_facebook_oauth(access_token)
-    email = access_token.info.email
-    user = where(email: email).first
-
-    return user if user.present?
-
     id = access_token.extra.raw_info.id
     url = "https://facebook.com/#{id}"
 
@@ -30,11 +25,6 @@ class User < ApplicationRecord
   end
 
   def self.find_for_vkontakte_oauth(access_token)
-    email = access_token.info.email
-    user = where(email: email).first
-
-    return user if user.present?
-
     url = access_token.info.urls[:Vkontakte]
 
     create_user_oauth(access_token, url)
@@ -42,9 +32,12 @@ class User < ApplicationRecord
 
   private
 
-  def create_user_oauth(access_token, url)
-    where(url: url).first_or_create! do |user|
-      user.email = access_token.info.email
+  def self.create_user_oauth(access_token, url)
+    email = access_token.info.email
+
+    where(email: email).first_or_create! do |user|
+      user.email = email
+      user.url = url
       user.provider = access_token.provider
       user.name = access_token.info.name
       user.password = Devise.friendly_token.first(16)
