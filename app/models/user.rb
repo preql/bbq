@@ -43,7 +43,6 @@ class User < ApplicationRecord
     email = params[:email]
 
     where(email: email).first_or_create! do |user|
-      user.email = email
       user.name = params[:name]
       user.url = params[:url]
       user.provider = params[:provider]
