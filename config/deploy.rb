@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.2"
 
-set :application, "events-liker.site"
+set :application, "events_liker"
 set :repo_url, "git@github.com:preql/bbq.git"
 
 # Default branch is :master
