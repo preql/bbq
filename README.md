@@ -30,5 +30,8 @@ bundle install
 bundle exec rake db:migrate
 ```
 
+## Демо ##
+Рабочая версия приложения [здесь](https://bbqforall.herokuapp.com/).
+
 ## Контактные данные ##
 stereotype1@mail.ru
