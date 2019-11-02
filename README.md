@@ -1,24 +1,34 @@
-# README
+# Приложение "Шашлыки" #
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Описание ##
+  Учебное приложение для планирования мероприятий, создавайте событие и приглашайте друзей! 
+  К событию можно подписаться, комментировать и добавлать к нему фотографии. 
+  Можно войти через ваши странцицы в социальных сетях vkontakte и facebook.
+  
+  `ruby 2.5.5`
+  
+  `rails 5.2.3`
+  
+  Использованные технологии:
+- Фреймворк `Bootstrap`
+- Загрузка и хранение файлов на `AWS`
+- Рассылка почты `SendGrid`
+- Локализация `i18n`
+- Загрузка изображений `carrierwave`
+- Аутентификация `pundit`, `omniauth`
 
-Things you may want to cover:
+## Установка ##
+Скачайте или клонируйте приложение, установите гем `bundler` если у вас его нет:
 
-* Ruby version
+```
+gem install bundler
+```
 
-* System dependencies
+Чтобы скачать необходимые библиотеки и подготовить базу данных в дериктории с приложением необходимо выполнить команды:
+```
+bundle install
+bundle exec rake db:migrate
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Контактные данные ##
+stereotype1@mail.ru
