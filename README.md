@@ -30,6 +30,22 @@ bundle install
 bundle exec rake db:migrate
 ```
 
+Так же нужно указать значения переменных окружения для работы:
+
+ * `Amazon S3`
+```
+S3_ACCESS_KEY
+S3_SECRET_KEY
+S3_BUCKET_REGION
+S3_BUCKET_NAME
+```
+
+ * `Sendgrid`
+ ```
+ SENDGRID_PASSWORD
+ SENDGRID_USERNAME
+ ```
+
 ## Демо ##
 Рабочая версия приложения [здесь](https://bbqforall.herokuapp.com/).
 
