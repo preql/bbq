@@ -15,7 +15,8 @@
 - Рассылка почты `SendGrid`
 - Локализация `i18n`
 - Загрузка изображений `carrierwave`
-- Аутентификация `pundit`, `omniauth`
+- Авторизация `pundit`
+- Аутентификация `omniauth`
 
 ## Установка ##
 Скачайте или клонируйте приложение, установите гем `bundler` если у вас его нет:
@@ -44,6 +45,14 @@ S3_BUCKET_NAME
  ```
  SENDGRID_PASSWORD
  SENDGRID_USERNAME
+ ```
+ 
+ * `Omniauth`
+ ```
+ OMNIAUTH_FACEBOOK_ID
+ OMNIAUTH_FACEBOOK_SECRET
+ OMNIAUTH_VKONTAKTE_ID
+ OMNIAUTH_VKONTAKTE_SECRET
  ```
 
 ## Демо ##
