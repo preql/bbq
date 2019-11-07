@@ -3,7 +3,7 @@ class NotificationSentJob < ApplicationJob
 
   def perform(source, subject)
     event = subject.event
-    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [subject.user.email]).uniq
+    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [subject.user&.email]).uniq
 
     deliver_method = EventMailer.method(source)
     all_emails.each do |mail|
