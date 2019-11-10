@@ -57,6 +57,3 @@ S3_BUCKET_NAME
 
 ## Демо ##
 Рабочая версия приложения [здесь](https://bbqforall.herokuapp.com/).
-
-## Контактные данные ##
-stereotype1@mail.ru
